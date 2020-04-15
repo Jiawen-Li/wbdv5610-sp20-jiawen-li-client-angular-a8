@@ -1,0 +1,19 @@
+<ul class="list-group">
+  <li class="list-group-item">
+    Courses Now Registered
+  </li>
+  <li class="list-group-item"
+      *ngFor="let course of courses"
+      [class]="{'active': courseId === course._id}"
+      >
+    <a routerLink="/courses/{{course._id}}/modules">
+      {{course.title}}
+    </a>
+    <a class="float-right"
+       routerLink="/courses/{{course._id}}/quizzes">
+      Quizzes
+    </a>
+  </li>
+</ul>
+
+
